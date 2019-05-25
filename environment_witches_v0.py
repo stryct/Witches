@@ -18,7 +18,7 @@ class Witches_Gym():
     def test(self):
         
         print(">>> Launching interactive testing mode...")
-        print(">>> play a card by typing it's (zero-based) index when asked for an action!")
+        print(">>> play a card by typing its (zero-based) index when asked for an action!")
 
         from witches import card_list_to_string
         import logging

@@ -87,7 +87,7 @@ class Witches():
     def __init__(self):
         """ Init the Witches Environment """
         
-        # used for the nice colored cards in the console on windows
+        # used for the nicely colored cards in the console on windows
         import colorama
         colorama.init()
 
