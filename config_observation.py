@@ -1,1 +1,0 @@
-OBS_NO_CARD = -1
