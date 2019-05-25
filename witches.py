@@ -49,8 +49,10 @@ def split_deck(deck:list, player_number:int):
 
     return split_deck
 
-def card_list_to_string(deck, large_cards = False):
+def card_list_to_string(deck):
     """ Get a string representing the players hand """
+
+    from config_game import DRAW_LARGE_CARDS as large_cards
 
     top = "╔══╗" if not large_cards else "╔═══╗"
     bottom = "╚══╝" if not large_cards else "╚═══╝"
@@ -84,7 +86,8 @@ class Witches():
 
     def __init__(self):
         """ Init the Witches Environment """
-
+        
+        # used for the nice colored cards in the console on windows
         import colorama
         colorama.init()
 
@@ -327,7 +330,7 @@ class Witches():
     def reset(self):
         """ Give out new cards, return the initial observation """
 
-        print("reseting!")
+        logging.debug("reseting!")
 
         import random
 
@@ -399,9 +402,6 @@ class Witches():
 
 
 if __name__ == "__main__":
-
-    import colorama
-    colorama.init()
 
     e = Witches()
     e.test()
